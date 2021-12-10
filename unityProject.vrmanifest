@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.gevrprojekt.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "E:\\Desktop\\Studium\\6. Semester\\Game Engines\\Abgaben\\VR-Projekt\\GE VR-Projekt\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "GE VR-Projekt [Testing]"
+        }
+      }
+    }
+  ]
+}
