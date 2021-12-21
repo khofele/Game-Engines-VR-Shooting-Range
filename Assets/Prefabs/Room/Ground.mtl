@@ -1,0 +1,7 @@
+newmtl ground6
+map_Kd ground6_Diffuse.tga
+bump ground6_Normal.tga
+disp ground6_Height.tga
+Kd 1 1 1
+d 1
+

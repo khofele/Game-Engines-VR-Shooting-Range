@@ -1,0 +1,5 @@
+newmtl metal_9_full_Material
+map_Kd metal 9 full.jpg
+Kd 0.7686275 0.7686275 0.7686275
+d 1
+

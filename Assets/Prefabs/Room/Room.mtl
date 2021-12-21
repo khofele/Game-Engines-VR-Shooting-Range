@@ -1,0 +1,14 @@
+newmtl Wall_Material
+map_Kd ground13_Diffuse.tga
+bump ground13_Normal.tga
+disp ground13_Height.tga
+Kd 1 1 1
+d 1
+
+newmtl ground13
+map_Kd ground13_Diffuse.tga
+bump ground13_Normal.tga
+disp ground13_Height.tga
+Kd 1 1 1
+d 1
+

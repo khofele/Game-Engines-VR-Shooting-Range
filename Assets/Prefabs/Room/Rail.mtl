@@ -1,0 +1,5 @@
+newmtl metal_6_full_Material
+map_Kd metal 6 full.jpg
+Kd 1 1 1
+d 1
+
