@@ -120,7 +120,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/grabgrip"
+                     "output" : "/actions/default/in/climb"
                   }
                },
                "mode" : "button",
