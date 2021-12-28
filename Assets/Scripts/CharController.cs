@@ -46,6 +46,8 @@ public class CharController : MonoBehaviour
     [SerializeField] private SteamVR_Action_Boolean climbAction;
     private bool isClimbing = false;
     private Vector3 climbDirection = Vector3.zero;
+    private bool allowedToClimb = false;
+    private Vector3 dir = new Vector3(0, 1, 0);
 
 
     private void Start()
@@ -75,8 +77,6 @@ public class CharController : MonoBehaviour
         Jump();
 
         GrapplingHook();
-
-        ClimbCheck();
     }
 
     public static float Angle(Vector2 p_vector2)
@@ -151,55 +151,5 @@ public class CharController : MonoBehaviour
             hookActive = false;
             lineRenderer.enabled = false;
         }
-    }
-
-    private void ClimbCheck()
-    {
-        if (climbAction.GetStateDown(leftHand))
-        {
-            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 1f))
-            {
-                if (hit.collider.GetComponent<Climbable>() != null)
-                {
-                    StartCoroutine(Climb(hit.collider));
-                }
-            }
-        }
-    }
-
-    private IEnumerator Climb(Collider climbCollider)
-    {
-        isClimbing = true;
-        isGrounded = false;
-        doubleJump = true;
-
-        while (climbAction.GetStateDown(leftHand))
-        {
-            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 1f))
-            {
-                rbody.isKinematic = true;
-
-                if(hit.collider == climbCollider)
-                {
-                    if (trackpad.magnitude > trackPadEnd && isClimbing == false)
-                    {
-                        Debug.Log("is climbing");
-                        velocity = climbDirection;
-                        rbody.AddForce(0, velocity.y * movementSpeed - rbody.velocity.y, 0, ForceMode.VelocityChange);
-                    }
-                }
-                else
-                {
-                    yield return null;
-                }
-            }
-            else
-            {
-                yield return null;
-            }
-        }
-
-        isClimbing = false;
-        rbody.isKinematic = false;
     }
 }
