@@ -8,7 +8,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] private float damage = 10f;
     [SerializeField] private float range = 80f;
     [SerializeField] private SteamVR_Input_Sources rightHand;
-    [SerializeField] private GameObject rightHandGameObject = null;
+    [SerializeField] private Camera cam = null;
     [SerializeField] private ParticleSystem particleSys = null;
     [SerializeField] private SteamVR_Action_Boolean shootAction = null;
     [SerializeField] private Sprite sprite = null;
@@ -32,7 +32,7 @@ public abstract class Weapon : MonoBehaviour
 
         RaycastHit hit;
 
-        if(Physics.Raycast(rightHandGameObject.transform.position, rightHandGameObject.transform.forward, out hit, range))
+        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
             Target target = hit.collider.gameObject.GetComponent<Target>();
 
