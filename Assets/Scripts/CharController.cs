@@ -42,14 +42,6 @@ public class CharController : MonoBehaviour
     private float hookStartTime = 0;
     private float hookDuration = 0.5f;
 
-    // climbing
-    [SerializeField] private SteamVR_Action_Boolean climbAction;
-    private bool isClimbing = false;
-    private Vector3 climbDirection = Vector3.zero;
-    private bool allowedToClimb = false;
-    private Vector3 dir = new Vector3(0, 1, 0);
-
-
     private void Start()
     {
         rbody = GetComponent<Rigidbody>();
@@ -66,8 +58,6 @@ public class CharController : MonoBehaviour
         UpdateInput();
 
         moveDirection = Quaternion.AngleAxis(Angle(trackpad) + axisHand.transform.localRotation.eulerAngles.y, Vector3.up) * Vector3.forward;
-
-        climbDirection = Quaternion.AngleAxis(Angle(trackpad) + axisHand.transform.localRotation.eulerAngles.y, Vector3.up) * Vector3.up;
 
         velocity = Vector3.zero;
 
@@ -116,7 +106,7 @@ public class CharController : MonoBehaviour
 
     private void WalkWithTrackpad()
     {
-        if (trackpad.magnitude > trackPadEnd && isClimbing == false && isGrounded == true)
+        if (trackpad.magnitude > trackPadEnd && isGrounded == true)
         {
             velocity = moveDirection;
             rbody.AddForce(velocity.x * movementSpeed - rbody.velocity.x, 0, velocity.z * movementSpeed - rbody.velocity.z, ForceMode.VelocityChange);
