@@ -12,6 +12,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] private ParticleSystem particleSys = null;
     [SerializeField] private SteamVR_Action_Boolean shootAction = null;
     [SerializeField] private Sprite sprite = null;
+    [SerializeField] private GameObject shootEffectPrefab = null;
 
     public Sprite Sprite
     {
@@ -39,7 +40,14 @@ public abstract class Weapon : MonoBehaviour
             if(target != null)
             {
                 target.TakeDamage(damage);
+                ShootEffect(hit.point);
             }
         }
+    }
+
+    private void ShootEffect(Vector3 hitPoint)
+    {
+        GameObject shootEffect = Instantiate(shootEffectPrefab, shootEffectPrefab.transform);
+        shootEffect.transform.position = hitPoint;
     }
 }

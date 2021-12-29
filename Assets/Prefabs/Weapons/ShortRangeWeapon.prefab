@@ -98,12 +98,13 @@ MonoBehaviour:
   damage: 10
   range: 80
   rightHand: 2
-  rightHandGameObject: {fileID: 0}
+  cam: {fileID: 0}
   particleSys: {fileID: 958634107387561176}
   shootAction:
     actionPath: /actions/default/in/Shoot
     needsReinit: 0
   sprite: {fileID: 21300000, guid: cd95a5e060986ca47a0fb396c57eb8c7, type: 3}
+  shootEffectPrefab: {fileID: 111650413049025163}
 --- !u!1 &958634107387561179
 GameObject:
   m_ObjectHideFlags: 0
