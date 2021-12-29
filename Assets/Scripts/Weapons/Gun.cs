@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-public abstract class Weapon : MonoBehaviour
+public abstract class Gun : MonoBehaviour
 {
     [SerializeField] private float damage = 10f;
     [SerializeField] private float range = 80f;
     [SerializeField] private SteamVR_Input_Sources rightHand;
     [SerializeField] private Camera cam = null;
-    [SerializeField] private ParticleSystem particleSys = null;
     [SerializeField] private SteamVR_Action_Boolean shootAction = null;
     [SerializeField] private Sprite sprite = null;
     [SerializeField] private GameObject shootEffectPrefab = null;
