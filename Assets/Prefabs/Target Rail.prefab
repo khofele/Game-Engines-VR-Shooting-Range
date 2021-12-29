@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
 --- !u!1 &8934163114527654396
-=======
---- !u!1 &9134582817101214371
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,20 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
   - component: {fileID: 8934163114527654387}
   - component: {fileID: 8934163114527654384}
   - component: {fileID: 8934163114527654385}
   - component: {fileID: 8934163114527654386}
   - component: {fileID: 2350853237094694484}
-=======
-  - component: {fileID: 9134582817101214370}
-  - component: {fileID: 9134582817101214375}
-  - component: {fileID: 9134582817101214368}
-  - component: {fileID: 9134582817101214369}
-  - component: {fileID: 8612513661166454524}
-  - component: {fileID: 635069332415120391}
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
   m_Layer: 0
   m_Name: Target Rail
   m_TagString: Untagged
@@ -33,21 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
 --- !u!4 &8934163114527654387
-=======
---- !u!4 &9134582817101214370
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
   m_GameObject: {fileID: 8934163114527654396}
-=======
-  m_GameObject: {fileID: 9134582817101214371}
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 7.2099266, y: 20.021015, z: 4.757164}
   m_LocalScale: {x: 2.5, y: 5, z: 0.1}
@@ -55,35 +34,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
 --- !u!33 &8934163114527654384
-=======
---- !u!33 &9134582817101214375
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
   m_GameObject: {fileID: 8934163114527654396}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8934163114527654385
-=======
-  m_GameObject: {fileID: 9134582817101214371}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &9134582817101214368
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
   m_GameObject: {fileID: 8934163114527654396}
-=======
-  m_GameObject: {fileID: 9134582817101214371}
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -118,49 +83,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
 --- !u!65 &8934163114527654386
-=======
---- !u!65 &9134582817101214369
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
   m_GameObject: {fileID: 8934163114527654396}
-=======
-  m_GameObject: {fileID: 9134582817101214371}
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
 --- !u!95 &2350853237094694484
-=======
---- !u!95 &8612513661166454524
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
   m_GameObject: {fileID: 8934163114527654396}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bc2b16e11ad37d54fbc2de04249c871c, type: 2}
-=======
-  m_GameObject: {fileID: 9134582817101214371}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19cfeadacc14ca5458b0f60eef0f63e7, type: 2}
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -169,18 +115,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
-<<<<<<< HEAD:Assets/Prefabs/Room/Target Rail.prefab
-=======
---- !u!114 &635069332415120391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9134582817101214371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ecd43f2ffcd5014995c33f1f0f248c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> Github/Feature_Targets:Assets/Prefabs/Target.prefab
