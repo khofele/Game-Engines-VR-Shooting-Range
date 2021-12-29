@@ -4,3 +4,6 @@ CharacterController.unity filter=lfs diff=lfs merge=lfs -text
 /pistol filter=lfs diff=lfs merge=lfs -text
 Assets/Pistol filter=lfs diff=lfs merge=lfs -text
 Assets/Ressources filter=lfs diff=lfs merge=lfs -text
+Assets/TextMesh[[:space:]]Pro filter=lfs diff=lfs merge=lfs -text
+Assets/TextMesh[[:space:]]Pro/* filter=lfs diff=lfs merge=lfs -text
+Assets/TextMesh[[:space:]]Pro/ filter=lfs diff=lfs merge=lfs -text

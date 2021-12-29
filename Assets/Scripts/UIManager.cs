@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Valve.VR.InteractionSystem;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TextMeshProUGUI points = null;
+    [SerializeField] private TextMeshProUGUI ammo = null;
+    [SerializeField] private GameObject rightHand = null;
+    [SerializeField] private Image currentWeaponImage = null;
+    private Sprite currentWeaponSprite = null;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        points.text = "Punkte: " + GameManager.Points;
+        ammo.text = GameManager.Ammo.ToString();
+
+        currentWeaponSprite = rightHand.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().Sprite;
+
+        if(currentWeaponSprite != null)
+        {
+            currentWeaponImage.GetComponent<Image>().sprite = currentWeaponSprite;
+            currentWeaponImage.SetNativeSize();
+            currentWeaponImage.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+        }
     }
 }

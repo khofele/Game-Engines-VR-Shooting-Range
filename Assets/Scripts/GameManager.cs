@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static int points = 0;
+    private static int ammo = 100;
+
+    public static int Points
     {
-        
+        get => points;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static int Ammo
     {
-        
+        get => ammo;
+        set
+        {
+            ammo = value;
+        }
     }
 }

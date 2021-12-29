@@ -35,6 +35,7 @@ public abstract class Gun : MonoBehaviour
 
     private void ShootGun()
     {
+        GameManager.Ammo -= 1;
         GetComponentInChildren<ParticleSystem>().Play();
 
         RaycastHit hit;
