@@ -54,6 +54,22 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/Trackpad",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/default/in/GrapplingHoook",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/Climb",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/Shoot",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -90,7 +106,7 @@
   "action_sets": [
     {
       "name": "/actions/default",
-      "usage": "single"
+      "usage": "leftright"
     },
     {
       "name": "/actions/platformer",
