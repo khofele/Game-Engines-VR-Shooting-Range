@@ -181,32 +181,6 @@
             },
             {
                "inputs" : {
-                  "scroll" : {
-                     "output" : "/actions/default/in/trackpad"
-                  }
-               },
-               "mode" : "scroll",
-               "parameters" : {
-                  "sub_mode" : "click"
-               },
-               "path" : "/user/hand/right/input/trackpad"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/default/in/grapplinghoook"
-                  }
-               },
-               "mode" : "button",
-               "parameters" : {
-                  "click_activate_threshold" : "0.05",
-                  "click_deactivate_threshold" : "0",
-                  "force_input" : "force"
-               },
-               "path" : "/user/hand/right/input/grip"
-            },
-            {
-               "inputs" : {
                   "pull" : {
                      "output" : "/actions/default/in/squeeze"
                   }
@@ -226,6 +200,24 @@
             {
                "inputs" : {
                   "click" : {
+                     "output" : "/actions/default/in/shoot"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/default/in/trackpad"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/right/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
                      "output" : "/actions/default/in/jump"
                   }
                },
@@ -235,7 +227,16 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/shoot"
+                     "output" : "/actions/default/in/grapplinghook"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/click"
                   }
                },
                "mode" : "trigger",
