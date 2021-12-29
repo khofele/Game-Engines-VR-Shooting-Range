@@ -11,7 +11,6 @@ public class Target : MonoBehaviour
         if(health > 0)
         {
             health -= damage;
-
             // DEBUG DIE
         }
     }
