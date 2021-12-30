@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Environment
+  - Button
+  - ShootingRange
+  - Settings
+  - Exit
+  - Back
   layers:
   - Default
   - TransparentFX
@@ -13,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Environment
-  - 
+  - Clickable
   - 
   - 
   - 

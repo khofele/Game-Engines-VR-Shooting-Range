@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer mainMixer;
+    [SerializeField] private AudioMixer mainMixer = null;
 
 
     //method to set volume in the settings menu - sets volume of all sound sources that have the MainAudoMixer as Output

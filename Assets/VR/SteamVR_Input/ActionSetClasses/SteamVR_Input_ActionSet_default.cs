@@ -105,43 +105,11 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Vector2 Trackpad
-        {
-            get
-            {
-                return SteamVR_Actions.default_Trackpad;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean Jump
-        {
-            get
-            {
-                return SteamVR_Actions.default_Jump;
-            }
-        }
-        
         public virtual SteamVR_Action_Boolean Click
         {
             get
             {
                 return SteamVR_Actions.default_Click;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean Shoot
-        {
-            get
-            {
-                return SteamVR_Actions.default_Shoot;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean GrapplingHook
-        {
-            get
-            {
-                return SteamVR_Actions.default_GrapplingHook;
             }
         }
         
