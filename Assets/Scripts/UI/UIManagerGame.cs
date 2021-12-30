@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Valve.VR.InteractionSystem;
 
-public class UIManager : MonoBehaviour
+public class UIManagerGame : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI points = null;
     [SerializeField] private TextMeshProUGUI ammo = null;

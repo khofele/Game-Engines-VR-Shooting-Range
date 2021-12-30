@@ -54,6 +54,22 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/GrapplingHook",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/Trackpad",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/default/in/Jump",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/Shoot",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
