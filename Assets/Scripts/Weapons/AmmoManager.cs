@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AmmoManager : MonoBehaviour
 {
-    private static int ammoAmount = 100;
+    private static int ammoAmount = 10;
 
     public static int AmmoAmount
     {
@@ -19,7 +19,7 @@ public class AmmoManager : MonoBehaviour
         if (other.gameObject.tag == "Ammopack")
         {
             ammoAmount += other.gameObject.GetComponent<Ammopack>().Ammo;
-            Debug.Log("Ammo " + ammoAmount);
+            other.gameObject.SetActive(false);
         }
     }
 }

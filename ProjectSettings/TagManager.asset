@@ -11,6 +11,7 @@ TagManager:
   - Exit
   - Back
   - Weapon
+  - Ammopack
   layers:
   - Default
   - TransparentFX
