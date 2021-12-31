@@ -19,6 +19,7 @@ public class ChangeWeapon : MonoBehaviour
         if(newWeapon != currentWeapon)
         {
             rightHand.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab = newWeapon;
+            currentWeapon = newWeapon;
         }
     }
 
