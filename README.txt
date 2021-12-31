@@ -7,3 +7,4 @@ ASSETS
   > https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555
   > https://assetstore.unity.com/packages/3d/props/lowpoly-training-dummy-202311
   > https://assetstore.unity.com/packages/3d/props/guns/guns-pack-low-poly-guns-collection-192553
+  > https://assetstore.unity.com/packages/3d/props/weapons/ammo-box-7701
