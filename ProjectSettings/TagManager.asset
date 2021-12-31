@@ -10,6 +10,7 @@ TagManager:
   - Settings
   - Exit
   - Back
+  - Weapon
   layers:
   - Default
   - TransparentFX
