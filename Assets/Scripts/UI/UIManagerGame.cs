@@ -16,7 +16,7 @@ public class UIManagerGame : MonoBehaviour
     private void Update()
     {
         points.text = "Punkte: " + GameManager.Points;
-        ammo.text = AmmoManager.AmmoAmount.ToString();
+        ammo.text = rightHand.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets.ToString() + "/" + AmmoManager.AmmoAmount.ToString();
 
         currentWeaponSprite = rightHand.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().Sprite;
 

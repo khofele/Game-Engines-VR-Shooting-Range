@@ -14,10 +14,30 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject front = null;
     [SerializeField] private GameObject parent = null;
+    [SerializeField] private int bullets = 2;
+    private int currentBullets = 0;
 
     public Sprite Sprite
     {
         get => sprite;
+    }
+
+    public int Bullets
+    {
+        get => bullets;
+        set
+        {
+            bullets = value;
+        }
+    }
+
+    public int CurrentBullets
+    {
+        get => currentBullets;
+        set
+        {
+            currentBullets = value;
+        }
     }
 
     private void Awake()
