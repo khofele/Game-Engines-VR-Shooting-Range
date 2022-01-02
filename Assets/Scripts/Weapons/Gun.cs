@@ -43,13 +43,29 @@ public abstract class Gun : MonoBehaviour
         if(Physics.Raycast(front.transform.position, front.transform.forward, out hit, range))
         {
             ShootEffect(hit.point, hit);
-            Target target = hit.collider.gameObject.GetComponent<Target>();
-
-            if(target != null)
+            //if Dummy - get script for Dummy and call TakeDamage
+            if (hit.collider.gameObject.CompareTag("Dummy"))
             {
-                target.TakeDamage(damage);
+                Dummy target = hit.collider.gameObject.GetComponent<Dummy>();
 
+                if (target != null)
+                {
+                    target.TakeDamage(damage);
+
+                }
             }
+            //if falling target - get script for TargetFall and call TakeDamage
+            else if (hit.collider.gameObject.CompareTag("TargetFall"))
+            {
+                TargetFall target = hit.collider.gameObject.GetComponent<TargetFall>();
+
+                if (target != null)
+                {
+                    target.TakeDamage(damage);
+
+                }
+            }
+            
         }
     }
 

@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public static int Points
     {
         get => points;
+        set
+        {
+            points = value;
+        }
     }
 
     public static int Ammo
@@ -19,5 +23,11 @@ public class GameManager : MonoBehaviour
         {
             ammo = value;
         }
+    }
+
+    public void AddPoints(int pointsPerTarget)
+    {
+        points += pointsPerTarget;
+        Debug.Log(points);
     }
 }

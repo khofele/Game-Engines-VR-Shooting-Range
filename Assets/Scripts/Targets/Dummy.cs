@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class Dummy : MonoBehaviour
 {
-    public float health = 50;
-    bool down = false; //true if target has fallen
+    [SerializeField] private float health = 60f;
+    [SerializeField] private static int pointsPerTarget = 5; //points the player gets after "killing" target
+    private bool down = false; //true if target has fallen
+    private float currentHealth = 0f;
 
     private WaitForSeconds delay; //delay until shield is put up again
+
+    [SerializeReference] private GameManager gm = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        delay = new WaitForSeconds(20f);
+        currentHealth = health;
+        delay = new WaitForSeconds(12f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!down && health <= 0)
+        if (!down && currentHealth <= 0)
         {
             down = true; //target has fallen
 
             //trigger animation
             gameObject.GetComponent<Animator>().SetTrigger("dead");
+
+            //get points for target "death"
+            gm.AddPoints(pointsPerTarget);
 
             //reset after some time 
             StartCoroutine(ResetFall()); //reset down after time (delay) - shield can be hitted again
@@ -31,10 +39,13 @@ public class Dummy : MonoBehaviour
     }
 
     //method to call with weapon - target has been hit
-    public void Hit()
+    public void TakeDamage(float damage)
     {
-        health = health - 5;
-        gameObject.GetComponent<Animator>().SetTrigger("pushed");
+        if (currentHealth > 0)
+        {
+            currentHealth -= damage;
+            gameObject.GetComponent<Animator>().SetTrigger("pushed");
+        }
     }
 
     //reset down + health (target is put up and can be shot down again)
@@ -46,6 +57,6 @@ public class Dummy : MonoBehaviour
         gameObject.GetComponent<Animator>().SetTrigger("idle");
         //reset values
         down = false;
-        health = 50;
+        currentHealth = health;
     }
 }

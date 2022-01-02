@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class TargetFall : MonoBehaviour
 {
-    public float health = 50; 
-    float yTransform = -2.48f; //how position.y is transformend when target falls down
-    bool down = false; //true if target has fallen
+    [SerializeField] private float health = 60f; //set max health
+    [SerializeField] private static int pointsPerTarget = 5; //points the player gets after "killing" target
+    private float currentHealth = 0f; //current health
+    private bool down = false; //true if target has fallen
 
     private WaitForSeconds delay; //delay until shield is put up again
+
+    [SerializeReference] private GameManager gm = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        delay = new WaitForSeconds(20f);
+        delay = new WaitForSeconds(12f);
+        currentHealth = health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!down && health <= 0)
+        if(!down && currentHealth <= 0)
         {
             down = true; //target has fallen
 
             //trigger animation
             gameObject.GetComponent<Animator>().SetTrigger("Fall");
-            //move y-Position -2.48 down 
-            transform.position = new Vector3(transform.position.x, transform.position.y - yTransform, transform.position.z);
+
+            //get points for target "death"
+            gm.AddPoints(pointsPerTarget);
 
             //reset after some time 
             StartCoroutine(ResetFall()); //reset down after time (delay) - shield can be hitted again
@@ -35,9 +40,12 @@ public class TargetFall : MonoBehaviour
     }
 
     //method to call with weapon - target has been hit
-    public void Hit()
+    public void TakeDamage(float damage)
     {
-        health = health - 5;
+        if (currentHealth > 0)
+        {
+            currentHealth -= damage;
+        }
     }
 
     //reset down + health (target is put up and can be shot down again)
@@ -49,6 +57,6 @@ public class TargetFall : MonoBehaviour
         gameObject.GetComponent<Animator>().SetTrigger("Idle");
         //reset values
         down = false;
-        health = 50;
+        currentHealth = health;
     }
 }
