@@ -78,5 +78,13 @@ public abstract class Gun : MonoBehaviour
         GameObject shootEffect = Instantiate(shootEffectPrefab, hitPoint + new Vector3(0.05f, 0.05f, 0.05f), Quaternion.LookRotation(hit.normal));
         shootEffect.transform.parent = parent.transform;
 
+        StartCoroutine(DespawnShootEffect(shootEffect));
+
+    }
+
+    private IEnumerator DespawnShootEffect(GameObject shootEffect)
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(shootEffect);
     }
 }
