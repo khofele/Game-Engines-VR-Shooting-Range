@@ -15,6 +15,11 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] private GameObject front = null;
     [SerializeField] private GameObject parent = null;
 
+    //sounds
+    [SerializeField] private AudioClip shootingSound = null;
+    [SerializeField] private AudioClip reloadSound = null;
+    private AudioSource audioSource = null; //current audio source
+
     public Sprite Sprite
     {
         get => sprite;
@@ -23,6 +28,7 @@ public abstract class Gun : MonoBehaviour
     private void Awake()
     {
         parent = GameObject.Find("ShootEffect");
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -37,6 +43,9 @@ public abstract class Gun : MonoBehaviour
     {
         GameManager.Ammo -= 1;
         GetComponentInChildren<ParticleSystem>().Play();
+        //sound
+        audioSource.clip = shootingSound;
+        audioSource.Play();
 
         RaycastHit hit;
 

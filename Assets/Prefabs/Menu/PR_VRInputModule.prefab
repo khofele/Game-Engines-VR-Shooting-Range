@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7054871647907191177}
   - component: {fileID: 7054871647907191176}
+  - component: {fileID: 7167100408242510053}
   - component: {fileID: 7054871647907191183}
   m_Layer: 0
   m_Name: PR_VRInputModule
@@ -47,6 +48,21 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &7167100408242510053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7054871647907191182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501eb8b744f73714fbe7dbdd5e3ef66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInGaze: 0
+  gazeInCutoff: 0.15
+  gazeOutCutoff: 0.4
 --- !u!114 &7054871647907191183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,3 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3f1d46ed089f94d98d266f5d83ed10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Camera: {fileID: 0}
+  m_TargetSource: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0

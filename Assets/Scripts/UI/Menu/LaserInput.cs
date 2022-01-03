@@ -9,9 +9,9 @@ public class LaserInput : MonoBehaviour
     [SerializeField] private static GameObject currentGameObject = null;
     [SerializeField] private LayerMask clickable = default;
     [SerializeField] private SteamVR_Action_Boolean clickAction;
-    [SerializeField] private SteamVR_Action_Boolean sliderClickAction;
     [SerializeField] private SteamVR_Input_Sources rightHand;
     [SerializeField] private UIManagerMenu uIManagerMenu = null;
+    [SerializeField] private SliderControl slider = null;
     private int ID = 0;
 
     private void Update()
@@ -48,6 +48,14 @@ public class LaserInput : MonoBehaviour
                         case "Exit":
                             Debug.Log("Exit");
                             Application.Quit();
+                            break;
+
+                        case "IncreaseVol":
+                            slider.IncreaseByOne();
+                            break;
+
+                        case "DecreaseVol":
+                            slider.DecreaseByOne();
                             break;
 
                         case "Back":

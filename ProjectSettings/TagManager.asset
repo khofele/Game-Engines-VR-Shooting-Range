@@ -10,6 +10,8 @@ TagManager:
   - Settings
   - Exit
   - Back
+  - IncreaseVol
+  - DecreaseVol
   layers:
   - Default
   - TransparentFX
