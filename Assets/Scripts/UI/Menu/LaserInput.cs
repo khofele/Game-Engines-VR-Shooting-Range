@@ -37,32 +37,26 @@ public class LaserInput : MonoBehaviour
                     {
                         case "ShootingRange":
                             SceneManager.LoadScene("Main");
-                            Debug.Log("Game");
                             break;
 
                         case "Settings":
-                            Debug.Log("Settings");
                             uIManagerMenu.DisableMenuPanel();
                             uIManagerMenu.DisplayOptionsPanel();
                             break;
 
                         case "Exit":
-                            Debug.Log("Exit");
                             Application.Quit();
                             break;
 
                         case "IncreaseVol":
-                            Debug.Log("IncreaseVol");
                             slider.GetComponent<SliderControl>().IncreaseByOne();
                             break;
 
                         case "DecreaseVol":
-                            Debug.Log("DecreaseVol");
                             slider.GetComponent<SliderControl>().DecreaseByOne();
                             break;
 
                         case "Back":
-                            Debug.Log("back");
                             uIManagerMenu.DisableOptionsPanel();
                             uIManagerMenu.DisplayMenuPanel();
                             break;
@@ -70,11 +64,6 @@ public class LaserInput : MonoBehaviour
                 }
             }
         }
-
-        //if(uIManagerMenu.OptionsPanel.activeSelf == true)
-        //{
-        //    if(sliderClickAction.)
-        //}
     }
 
 }

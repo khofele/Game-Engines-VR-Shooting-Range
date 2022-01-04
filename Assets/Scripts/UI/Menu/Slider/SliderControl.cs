@@ -34,7 +34,6 @@ public class SliderControl : MonoBehaviour {
     //Increase the value of the float variable "clickValue" by one increment
     public void IncreaseByOne()
     {
-        Debug.Log("IncreaseByOne");
         if (clickValue < maxSliderValue)
         {
             limit = maxSliderValue - increment;
@@ -52,7 +51,6 @@ public class SliderControl : MonoBehaviour {
     //Decrease the value of the float variable "clickValue" by one increment
     public void DecreaseByOne()
     {
-        Debug.Log("DecreaseByOne");
         if (clickValue > minSliderValue)
         {
             if (clickValue > increment)
