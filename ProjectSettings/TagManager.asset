@@ -12,6 +12,10 @@ TagManager:
   - Back
   - Weapon
   - Ammopack
+  - projectile
+  - Dummy
+  - TargetFall
+  - MovingTarget
   layers:
   - Default
   - TransparentFX

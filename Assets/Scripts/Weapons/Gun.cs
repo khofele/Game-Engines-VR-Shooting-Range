@@ -103,6 +103,17 @@ public abstract class Gun : MonoBehaviour
 
                 }
             }
+            //if falling target - get script for TargetFall and call TakeDamage
+            else if (hit.collider.gameObject.CompareTag("MovingTarget"))
+            {
+                MovingTarget target = hit.collider.gameObject.GetComponent<MovingTarget>();
+
+                if (target != null)
+                {
+                    target.TargetHit();
+
+                }
+            }
 
             shoot = false;
 

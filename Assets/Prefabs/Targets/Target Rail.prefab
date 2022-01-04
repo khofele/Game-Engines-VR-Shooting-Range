@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1220461503121784295}
   m_Layer: 0
   m_Name: Target Rail
-  m_TagString: Untagged
+  m_TagString: MovingTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

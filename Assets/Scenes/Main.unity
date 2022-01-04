@@ -23169,7 +23169,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507412564}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -37470,10 +37470,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 593203314}
     m_Modifications:
+    - target: {fileID: 712022284117283008, guid: e2697933be3e2ab49b78ade408c7a3d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 712022284117283008, guid: e2697933be3e2ab49b78ade408c7a3d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3828354
+      objectReference: {fileID: 0}
     - target: {fileID: 7395043633699351569, guid: e2697933be3e2ab49b78ade408c7a3d0, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1819895086}
+    - target: {fileID: 7395043633699351569, guid: e2697933be3e2ab49b78ade408c7a3d0, type: 3}
+      propertyPath: m_SelectedEdges.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395043633699351569, guid: e2697933be3e2ab49b78ade408c7a3d0, type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7395043633699351570, guid: e2697933be3e2ab49b78ade408c7a3d0, type: 3}
       propertyPath: m_Mesh
       value: 

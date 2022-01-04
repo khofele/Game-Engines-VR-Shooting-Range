@@ -38,11 +38,11 @@ public class AmmoManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(currentBullets + " hier");
+        //Debug.Log(currentBullets + " hier");
         bullets = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().Bullets;
         currentBullets = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets;
 
-        Debug.Log(currentBullets + " hier 2");
+        //Debug.Log(currentBullets + " hier 2");
 
         if (ammoAmount > 0 && reloadAction.GetStateDown(rightHand))
         {
