@@ -42,12 +42,20 @@ public class CharController : MonoBehaviour
     private float hookStartTime = 0;
     private float hookDuration = 0.5f;
 
+    //sounds
+    [SerializeField] private AudioClip[] footstepSounds;    // an array of footstep sounds that will be randomly selected from.
+    [SerializeField] private AudioClip jumpSound;           // the sound played when character leaves the ground.
+    private AudioSource audioSource; //current audio source
+    float elapsedTime = 0; //time since last step sound
+    float soundDelay = 0.5f; //delay for sound to play
+
     private void Start()
     {
         rbody = GetComponent<Rigidbody>();
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.startWidth = 0.02f;
         lineRenderer.endWidth = 0.02f;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -94,6 +102,9 @@ public class CharController : MonoBehaviour
             rbody.AddForce(new Vector3(0, (Mathf.Sqrt(jumpHeight * -2f * gravity)), 0), ForceMode.VelocityChange);
             isGrounded = false;
             doubleJump = true;
+            //sound
+            audioSource.clip = jumpSound;
+            audioSource.Play();
         }
         else if (jumpAction.GetStateDown(leftHand) && doubleJump == true)
         {
@@ -101,6 +112,9 @@ public class CharController : MonoBehaviour
             rbody.AddForce(new Vector3(0, (Mathf.Sqrt(jumpHeight * -2f * gravity)), 0), ForceMode.VelocityChange);
             isGrounded = false;
             doubleJump = false;
+            //sound
+            audioSource.clip = jumpSound;
+            audioSource.Play();
         }
     }
 
@@ -110,6 +124,23 @@ public class CharController : MonoBehaviour
         {
             velocity = moveDirection;
             rbody.AddForce(velocity.x * movementSpeed - rbody.velocity.x, 0, velocity.z * movementSpeed - rbody.velocity.z, ForceMode.VelocityChange);
+
+            elapsedTime += Time.deltaTime;
+
+            if (elapsedTime >= soundDelay) 
+            {
+                elapsedTime = 0;
+
+                // pick & play a random footstep sound from the array,
+                // excluding sound at index 0
+                int n = Random.Range(1, footstepSounds.Length);
+                audioSource.clip = footstepSounds[n];
+                audioSource.PlayOneShot(audioSource.clip);
+                // move picked sound to index 0 so it's not picked next time
+                footstepSounds[n] = footstepSounds[0];
+                footstepSounds[0] = audioSource.clip;
+            }
+            
         }
     }
 

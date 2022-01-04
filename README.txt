@@ -8,3 +8,10 @@ ASSETS
   > https://assetstore.unity.com/packages/3d/props/lowpoly-training-dummy-202311
   > https://assetstore.unity.com/packages/3d/props/guns/guns-pack-low-poly-guns-collection-192553
   > https://assetstore.unity.com/packages/3d/props/weapons/ammo-box-7701
+=======
+- Animationen: 
+  > https://assetstore.unity.com/packages/3d/props/lowpoly-training-dummy-202311
+- Audio:
+  > https://assetstore.unity.com/packages/audio/sound-fx/weapons/weapon-soldier-sounds-pack-29662
+  > https://assetstore.unity.com/packages/audio/sound-fx/weapons/blade-sounds-30189#content
+

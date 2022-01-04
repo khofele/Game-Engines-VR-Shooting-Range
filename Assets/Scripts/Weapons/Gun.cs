@@ -18,6 +18,11 @@ public abstract class Gun : MonoBehaviour
     private int currentBullets = 0;
     private bool shoot = false;
 
+    //sounds
+    [SerializeField] private AudioClip shootingSound = null;
+    [SerializeField] private AudioClip reloadSound = null;
+    private AudioSource audioSource = null; //current audio source
+
     public Sprite Sprite
     {
         get => sprite;
@@ -49,7 +54,7 @@ public abstract class Gun : MonoBehaviour
     private void Awake()
     {
         parent = GameObject.Find("ShootEffect");
-        currentBullets = 0;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -67,13 +72,30 @@ public abstract class Gun : MonoBehaviour
 
             GetComponentInChildren<ParticleSystem>().Play();
             AmmoManager.CurrentBullets -= 1;
+        //sound
+        audioSource.clip = shootingSound;
+        audioSource.Play();
 
             RaycastHit hit;
 
-            if (Physics.Raycast(front.transform.position, front.transform.forward, out hit, range))
+        if(Physics.Raycast(front.transform.position, front.transform.forward, out hit, range))
+        {
+            ShootEffect(hit.point, hit);
+            //if Dummy - get script for Dummy and call TakeDamage
+            if (hit.collider.gameObject.CompareTag("Dummy"))
             {
-                ShootEffect(hit.point, hit);
-                Target target = hit.collider.gameObject.GetComponent<Target>();
+                Dummy target = hit.collider.gameObject.GetComponent<Dummy>();
+
+                if (target != null)
+                {
+                    target.TakeDamage(damage);
+
+                }
+            }
+            //if falling target - get script for TargetFall and call TakeDamage
+            else if (hit.collider.gameObject.CompareTag("TargetFall"))
+            {
+                TargetFall target = hit.collider.gameObject.GetComponent<TargetFall>();
 
                 if (target != null)
                 {
