@@ -70,15 +70,15 @@ public abstract class Gun : MonoBehaviour
     private void ShootGun()
     {
 
-            GetComponentInChildren<ParticleSystem>().Play();
-            AmmoManager.CurrentBullets -= 1;
+        GetComponentInChildren<ParticleSystem>().Play();
+        AmmoManager.CurrentBullets -= 1;
         //sound
         audioSource.clip = shootingSound;
         audioSource.Play();
 
-            RaycastHit hit;
+        RaycastHit hit;
 
-        if(Physics.Raycast(front.transform.position, front.transform.forward, out hit, range))
+        if (Physics.Raycast(front.transform.position, front.transform.forward, out hit, range))
         {
             ShootEffect(hit.point, hit);
             //if Dummy - get script for Dummy and call TakeDamage
@@ -104,8 +104,9 @@ public abstract class Gun : MonoBehaviour
                 }
             }
 
-        shoot = false;
+            shoot = false;
 
+        }
     }
 
     private void ShootEffect(Vector3 hitPoint, RaycastHit hit)
