@@ -22,12 +22,14 @@ public class UIManagerGame : MonoBehaviour
     private void Update()
     {
         points.text = "Points: " + GameManager.Points;
-        ammo.text = rightHand.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets.ToString() + "/" + AmmoManager.AmmoAmount.ToString();
+        ammo.text = AmmoManager.CurrentBullets.ToString() + "/" + AmmoManager.AmmoAmount.ToString();
+        //ammo.text = rightHand.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets.ToString() + "/" + AmmoManager.AmmoAmount.ToString();
 
         currentWeaponSprite = rightHand.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().Sprite;
 
         if(currentWeaponSprite != null)
         {
+            Debug.Log(currentWeaponSprite.name);
             currentWeaponImage.GetComponent<Image>().sprite = currentWeaponSprite;
             currentWeaponImage.SetNativeSize();
             currentWeaponImage.transform.localScale = new Vector3(0.5f, 0.5f, 1);

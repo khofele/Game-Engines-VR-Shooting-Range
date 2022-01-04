@@ -51,6 +51,11 @@ public abstract class Gun : MonoBehaviour
         get => prefabHand;
     }
 
+    public AudioClip ReloadSound
+    {
+        get => reloadSound;
+    }
+
     private void Awake()
     {
         parent = GameObject.Find("ShootEffect");
