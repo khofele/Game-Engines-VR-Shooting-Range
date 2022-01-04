@@ -115,7 +115,7 @@ public class CharController : MonoBehaviour
 
     private void GrapplingHook()
     {
-        if (grapplingHookAction.GetStateDown(rightHand) && hookActive == false)
+        if (grapplingHookAction.GetStateDown(leftHand) && hookActive == false)
         {
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, maxDistance, environmentLayermask))
             {
@@ -125,7 +125,7 @@ public class CharController : MonoBehaviour
                 hookActive = true;
             }
         }
-        else if (grapplingHookAction.GetStateDown(rightHand) && hookActive == true)
+        else if (grapplingHookAction.GetStateDown(leftHand) && hookActive == true)
         {
             hookActive = false;
         }

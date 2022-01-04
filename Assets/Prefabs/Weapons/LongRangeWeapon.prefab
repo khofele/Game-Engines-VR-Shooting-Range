@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5176719255515132477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.47, z: 3.47}
+  m_LocalPosition: {x: 0, y: 0.47, z: 4.19}
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 437526501606034336}
@@ -4999,3 +4999,4 @@ MonoBehaviour:
   player: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   front: {fileID: 371475519348870856}
   parent: {fileID: 0}
+  bullets: 2
