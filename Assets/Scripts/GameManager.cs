@@ -20,5 +20,6 @@ public class GameManager : MonoBehaviour
     public void AddPoints(int pointsPerTarget)
     {
         points += pointsPerTarget;
+        Debug.Log(points);
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8934163114527654385}
   - component: {fileID: 8934163114527654386}
   - component: {fileID: 2350853237094694484}
+  - component: {fileID: 1220461503121784295}
   m_Layer: 0
   m_Name: Target Rail
   m_TagString: Untagged
@@ -115,3 +116,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1220461503121784295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934163114527654396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dbf14e0bd6c464bba549b0a80e3dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
