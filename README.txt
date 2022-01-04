@@ -6,3 +6,8 @@ ASSETS
   > https://assetstore.unity.com/packages/2d/textures-materials/10-texture-sets-industrial-02-17624
   > https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555
   > https://assetstore.unity.com/packages/3d/props/lowpoly-training-dummy-202311
+- Animationen: 
+  > https://assetstore.unity.com/packages/3d/props/lowpoly-training-dummy-202311
+- Audio:
+  > https://assetstore.unity.com/packages/audio/sound-fx/weapons/weapon-soldier-sounds-pack-29662
+  > https://assetstore.unity.com/packages/audio/sound-fx/weapons/blade-sounds-30189#content
