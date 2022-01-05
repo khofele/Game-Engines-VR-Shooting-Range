@@ -29,6 +29,8 @@ public class TargetFall : MonoBehaviour
 
             //trigger animation
             gameObject.GetComponent<Animator>().SetTrigger("Fall");
+            //set target down
+            StartCoroutine(Fall());
 
             //get points for target "death"
             gm.AddPoints(pointsPerTarget);
@@ -55,8 +57,27 @@ public class TargetFall : MonoBehaviour
         //trigger idle animation
         gameObject.GetComponent<Animator>().ResetTrigger("Fall");
         gameObject.GetComponent<Animator>().SetTrigger("Idle");
+        //set target back up
+        transform.position = new Vector3(transform.position.x, 9.16f, transform.position.z); //shields on target hill = height standing 
         //reset values
         down = false;
         currentHealth = health;
+    }
+
+    IEnumerator Fall()
+    {
+        //transform.position = new Vector3(transform.position.x, 6.65f, transform.position.z); //shields on target hill = height fallen
+        float inTime = 0.83f;
+
+        Vector3 fromPos = transform.position;
+        Vector3 Endpos = new Vector3(transform.position.x, 6.65f, transform.position.z); //shields on target hill = height fallen
+
+        for (float t = 0f; t <= 1; t += Time.deltaTime / inTime)
+        {
+
+            transform.position = Vector3.Lerp(fromPos, Endpos, t);
+
+            yield return null;
+        }
     }
 }
