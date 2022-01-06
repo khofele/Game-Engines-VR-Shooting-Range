@@ -56,6 +56,25 @@ public abstract class Gun : MonoBehaviour
         get => reloadSound;
     }
 
+    public SteamVR_Action_Boolean ShootAction
+    {
+        get => shootAction;
+    }
+
+    public SteamVR_Input_Sources RightHand
+    {
+        get => rightHand;
+    }
+
+    public bool Shoot
+    {
+        get => shoot;
+        set
+        {
+            shoot = value;
+        }
+    }
+
     private void Awake()
     {
         parent = GameObject.Find("ShootEffect");
@@ -72,7 +91,7 @@ public abstract class Gun : MonoBehaviour
         }
     }
 
-    private void ShootGun()
+    public void ShootGun()
     {
 
         GetComponentInChildren<ParticleSystem>().Play();

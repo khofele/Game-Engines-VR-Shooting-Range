@@ -108,7 +108,7 @@ MonoBehaviour:
   front: {fileID: 8035184490636683231}
   parent: {fileID: 0}
   bullets: 10
-  prefabHand: {fileID: 0}
+  prefabHand: {fileID: 8733003864650411918, guid: a81e819a6e8502a4b80fabc447daa5c0, type: 3}
   shootingSound: {fileID: 8300000, guid: 077449fe801af9a40a8d72e734bb439c, type: 3}
   reloadSound: {fileID: 8300000, guid: 3c5c1d4d7b9307c458890a4beb12e4ae, type: 3}
 --- !u!82 &-7950419529002281554
