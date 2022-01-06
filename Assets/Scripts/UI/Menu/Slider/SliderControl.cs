@@ -20,7 +20,6 @@ public class SliderControl : MonoBehaviour {
         incrementorSlider = GetComponent<Slider>();
         maxSliderValue = incrementorSlider.maxValue;
         minSliderValue = incrementorSlider.minValue;
-
     }
 	
 	// Update is called once per frame
@@ -28,7 +27,6 @@ public class SliderControl : MonoBehaviour {
 
         //Update the Slider if there is a change in the button's state
         incrementorSlider.value = clickValue;
-  
     }
 
     //Increase the value of the float variable "clickValue" by one increment
@@ -65,6 +63,4 @@ public class SliderControl : MonoBehaviour {
             }
         }
     }
-
-
 }
