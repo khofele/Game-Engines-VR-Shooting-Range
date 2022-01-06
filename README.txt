@@ -8,6 +8,7 @@ ASSETS
   > https://assetstore.unity.com/packages/3d/props/lowpoly-training-dummy-202311
   > https://assetstore.unity.com/packages/3d/props/guns/guns-pack-low-poly-guns-collection-192553
   > https://assetstore.unity.com/packages/3d/props/weapons/ammo-box-7701
+  > https://assetstore.unity.com/packages/3d/props/weapons/katana-4k-pbr-121020
 =======
 - Animationen: 
   > https://assetstore.unity.com/packages/3d/props/lowpoly-training-dummy-202311
