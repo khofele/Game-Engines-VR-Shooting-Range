@@ -74,7 +74,7 @@ Transform:
   m_GameObject: {fileID: 1280271141671754}
   m_LocalRotation: {x: 0.10626403, y: 0, z: 0, w: 0.994338}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4104722145860960}
   - {fileID: 4086883729826566}
@@ -167,13 +167,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 6b38a390c70b2b14ca6e06024f24aed8, type: 3}
   prefabHand: {fileID: 8733003864650411918, guid: a81e819a6e8502a4b80fabc447daa5c0, type: 3}
   damage: 10
-  range: 80
   rightHand: 2
-  sliceAction:
-    actionPath: /actions/default/in/Shoot
-    needsReinit: 0
-  front: {fileID: 8252579152989990746}
-  bladeColliders: []
   sliceSound: {fileID: 8300000, guid: 811d36b4845c63a42a32f3e13ab3a5d9, type: 3}
 --- !u!82 &-1539525484379235060
 AudioSource:
