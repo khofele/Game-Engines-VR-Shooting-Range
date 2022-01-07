@@ -6,10 +6,7 @@ using Valve.VR;
 public class Katana : Weapon
 {
     [SerializeField] private float damage = 10f;
-    [SerializeField] private float range = 5f;
     [SerializeField] private SteamVR_Input_Sources rightHand;
-    [SerializeField] private SteamVR_Action_Boolean sliceAction = null;
-    [SerializeField] private GameObject front = null;
     private bool slice = false;
     //sounds
     [SerializeField] private AudioClip sliceSound = null;
@@ -21,46 +18,21 @@ public class Katana : Weapon
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (sliceAction.GetStateDown(rightHand))
+        if (other.gameObject.CompareTag("Dummy"))
         {
-            slice = true;
-            Hit();
-        }
-    }
+            Dummy target = other.gameObject.GetComponent<Dummy>();
 
-    private void Hit()
-    {
-        //Animation
-        gameObject.GetComponent<Animator>().ResetTrigger("Idle");
-        gameObject.GetComponent<Animator>().SetTrigger("Slice");
-
-        //sound
-        audioSource.clip = sliceSound;
-        audioSource.Play();
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(front.transform.position, front.transform.forward, out hit, range))
-        {
-            //if Dummy - get script for Dummy and call TakeDamage
-            if (hit.collider.gameObject.CompareTag("Dummy"))
+            if (target != null)
             {
-                Dummy target = hit.collider.gameObject.GetComponent<Dummy>();
+                audioSource.clip = sliceSound;
+                audioSource.Play();
 
-                if (target != null)
-                {
-                    target.TakeDamage(damage);
+                target.TakeDamage(damage);
 
-                }
             }
-
-            slice = false;
-            gameObject.GetComponent<Animator>().ResetTrigger("Slice");
-            gameObject.GetComponent<Animator>().SetTrigger("Idle");
-
         }
     }
 }

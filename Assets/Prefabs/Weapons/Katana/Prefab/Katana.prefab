@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4605413356805658}
   - component: {fileID: 65191911046148624}
   m_Layer: 0
-  m_Name: collider
+  m_Name: colliderBlade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 54333176588385812}
   - component: {fileID: 2586368080969245437}
   - component: {fileID: -1539525484379235060}
-  - component: {fileID: 537839925857066203}
   m_Layer: 0
   m_Name: Katana
   m_TagString: Weapon
@@ -73,7 +72,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280271141671754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.10626403, y: 0, z: 0, w: 0.994338}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -87,7 +86,7 @@ Transform:
   - {fileID: 243777665095605802}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 12.2, y: 0, z: 0}
 --- !u!33 &33405239008501466
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -173,7 +172,8 @@ MonoBehaviour:
   sliceAction:
     actionPath: /actions/default/in/Shoot
     needsReinit: 0
-  front: {fileID: 0}
+  front: {fileID: 8252579152989990746}
+  bladeColliders: []
   sliceSound: {fileID: 8300000, guid: 811d36b4845c63a42a32f3e13ab3a5d9, type: 3}
 --- !u!82 &-1539525484379235060
 AudioSource:
@@ -271,25 +271,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &537839925857066203
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280271141671754}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ca1953b080e6c7d43aba35525cf952e2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1316530495005378
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +282,7 @@ GameObject:
   - component: {fileID: 4557809817410206}
   - component: {fileID: 65095071667611260}
   m_Layer: 0
-  m_Name: collider
+  m_Name: colliderBlade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +371,7 @@ GameObject:
   - component: {fileID: 4086883729826566}
   - component: {fileID: 65953118172764900}
   m_Layer: 0
-  m_Name: collider
+  m_Name: colliderBlade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,10 +559,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8252579152989990746}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.262, z: 0.003}
+  m_LocalRotation: {x: 0.13966407, y: -0, z: -0, w: 0.9901989}
+  m_LocalPosition: {x: 0, y: 0.262, z: 0.002999898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4942850815452524}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.057, y: 0, z: 0}
