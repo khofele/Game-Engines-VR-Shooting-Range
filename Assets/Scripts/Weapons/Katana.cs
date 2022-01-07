@@ -3,29 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-public class Katana : MonoBehaviour
+public class Katana : Weapon
 {
     [SerializeField] private float damage = 10f;
     [SerializeField] private float range = 5f;
     [SerializeField] private SteamVR_Input_Sources rightHand;
     [SerializeField] private SteamVR_Action_Boolean sliceAction = null;
-    [SerializeField] private Sprite sprite = null;
-    [SerializeField] private GameObject prefabHand = null;
     [SerializeField] private GameObject front = null;
     private bool slice = false;
     //sounds
     [SerializeField] private AudioClip sliceSound = null;
     private AudioSource audioSource = null; //current audio source
 
-    public Sprite Sprite
-    {
-        get => sprite;
-    }
-
-    public GameObject PrefabHand
-    {
-        get => prefabHand;
-    }
 
     private void Awake()
     {

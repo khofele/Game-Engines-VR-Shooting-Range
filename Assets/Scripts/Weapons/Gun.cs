@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
-public abstract class Gun : MonoBehaviour
+public abstract class Gun : Weapon
 {
     [SerializeField] private float damage = 10f;
     [SerializeField] private float range = 80f;
     [SerializeField] private SteamVR_Input_Sources rightHand;
     [SerializeField] private SteamVR_Action_Boolean shootAction = null;
-    [SerializeField] private Sprite sprite = null;
     [SerializeField] private GameObject shootEffectPrefab = null;
     [SerializeField] private GameObject front = null;
     [SerializeField] private GameObject parent = null;
     [SerializeField] private int bullets = 2;
-    [SerializeField] private GameObject prefabHand = null;
     private int currentBullets = 0;
     private bool shoot = false;
 
@@ -23,10 +21,6 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] private AudioClip reloadSound = null;
     private AudioSource audioSource = null; //current audio source
 
-    public Sprite Sprite
-    {
-        get => sprite;
-    }
 
     public int Bullets
     {
@@ -44,11 +38,6 @@ public abstract class Gun : MonoBehaviour
         {
             currentBullets = value;
         }
-    }
-
-    public GameObject PrefabHand
-    {
-        get => prefabHand;
     }
 
     private void Awake()

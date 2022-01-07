@@ -34,7 +34,7 @@ public class ChangeWeapon : MonoBehaviour
     {
         if(other.gameObject.tag == "Weapon")
         {
-            newWeapon = other.gameObject.GetComponent<Gun>().PrefabHand;
+            newWeapon = other.gameObject.GetComponent<Weapon>().PrefabHand;
             ChangeCurrentWeapon();
         }
     }
