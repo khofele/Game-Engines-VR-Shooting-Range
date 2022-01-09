@@ -6,11 +6,11 @@ using Valve.VR.InteractionSystem;
 public class MachingeGun : Gun
 {
 
-    private int counter = 0; 
+    private int counter = 0;
 
     public virtual void Update()
     {
-        if(ShootAction.GetState(RightHand) && Shoot == false && AmmoManager.CurrentBullets > 0)
+        if (ShootAction.GetState(RightHand) && Shoot == false && AmmoManager.CurrentBullets > 0)
         {
             counter++;
             Shoot = true;
@@ -23,7 +23,7 @@ public class MachingeGun : Gun
         GetComponentInChildren<ParticleSystem>().Play();
         RightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets -= 1;
         AudioSource.clip = ShootingSound;
-        
+
         //sound
         if (counter % 3 == 0)
         {

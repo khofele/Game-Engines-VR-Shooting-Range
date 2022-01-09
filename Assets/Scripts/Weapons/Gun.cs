@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
-public abstract class Gun : Weapon
+public abstract class Gun : MonoBehaviour
 {
     [SerializeField] private float damage = 10f;
     [SerializeField] private float range = 80f;
     [SerializeField] private SteamVR_Input_Sources rightHand;
     [SerializeField] private SteamVR_Action_Boolean shootAction = null;
+    [SerializeField] private Sprite sprite = null;
     [SerializeField] private GameObject shootEffectPrefab = null;
     [SerializeField] private GameObject front = null;
     [SerializeField] private GameObject parent = null;
     [SerializeField] private int bullets = 2;
+    [SerializeField] private GameObject prefabHand = null;
+    [SerializeField] private GameObject rightHandGO = null;
     private int currentBullets = 0;
     private bool shoot = false;
 
@@ -21,6 +25,10 @@ public abstract class Gun : Weapon
     [SerializeField] private AudioClip reloadSound = null;
     private AudioSource audioSource = null; //current audio source
 
+    public Sprite Sprite
+    {
+        get => sprite;
+    }
 
     public int Bullets
     {
@@ -40,15 +48,84 @@ public abstract class Gun : Weapon
         }
     }
 
+    public GameObject PrefabHand
+    {
+        get => prefabHand;
+    }
+
+    public AudioClip ReloadSound
+    {
+        get => reloadSound;
+    }
+
+    public SteamVR_Action_Boolean ShootAction
+    {
+        get => shootAction;
+    }
+
+    public SteamVR_Input_Sources RightHand
+    {
+        get => rightHand;
+    }
+
+    public bool Shoot
+    {
+        get => shoot;
+        set
+        {
+            shoot = value;
+        }
+    }
+
+    public GameObject RightHandGO
+    {
+        get => rightHandGO;
+    }
+
+    public AudioSource AudioSource
+    {
+        get => audioSource;
+        set
+        {
+            audioSource = value;
+        }
+    }
+
+    public AudioClip ShootingSound
+    {
+        get => shootingSound;
+        set
+        {
+            shootingSound = value;
+        }
+    }
+
+    public GameObject Front
+    {
+        get => front;
+    }
+
+    public float Damage
+    {
+        get => damage;
+    }
+
+    public float Range
+    {
+        get => range;
+    }
+
+
     private void Awake()
     {
         parent = GameObject.Find("ShootEffect");
+        rightHandGO = GameObject.Find("RightHand");
         audioSource = GetComponent<AudioSource>();
+        prefabHand.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = 0;
     }
 
     private void Update()
     {
-
         if (shootAction.GetStateDown(rightHand) && shoot == false && AmmoManager.CurrentBullets > 0)
         {
             shoot = true;
@@ -56,11 +133,10 @@ public abstract class Gun : Weapon
         }
     }
 
-    private void ShootGun()
+    public void ShootGun()
     {
-
         GetComponentInChildren<ParticleSystem>().Play();
-        AmmoManager.CurrentBullets -= 1;
+        rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets -= 1;
         //sound
         audioSource.clip = shootingSound;
         audioSource.Play();
@@ -92,24 +168,11 @@ public abstract class Gun : Weapon
 
                 }
             }
-            //if falling target - get script for TargetFall and call TakeDamage
-            else if (hit.collider.gameObject.CompareTag("MovingTarget"))
-            {
-                MovingTarget target = hit.collider.gameObject.GetComponent<MovingTarget>();
-
-                if (target != null)
-                {
-                    target.TargetHit();
-
-                }
-            }
-
-            shoot = false;
-
         }
+        shoot = false;
     }
 
-    private void ShootEffect(Vector3 hitPoint, RaycastHit hit)
+    public void ShootEffect(Vector3 hitPoint, RaycastHit hit)
     {
         GameObject shootEffect = Instantiate(shootEffectPrefab, hitPoint + new Vector3(0.05f, 0.05f, 0.05f), Quaternion.LookRotation(hit.normal));
         shootEffect.transform.parent = parent.transform;
