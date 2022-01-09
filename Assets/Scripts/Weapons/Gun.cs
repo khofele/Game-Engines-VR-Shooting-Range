@@ -77,6 +77,45 @@ public abstract class Gun : MonoBehaviour
         }
     }
 
+    public GameObject RightHandGO
+    {
+        get => rightHandGO;
+    }
+
+    public AudioSource AudioSource
+    {
+        get => audioSource;
+        set
+        {
+            audioSource = value;
+        }
+    }
+
+    public AudioClip ShootingSound
+    {
+        get => shootingSound;
+        set
+        {
+            shootingSound = value;
+        }
+    }
+
+    public GameObject Front
+    {
+        get => front;
+    }
+
+    public float Damage
+    {
+        get => damage;
+    }
+
+    public float Range
+    {
+        get => range;
+    }
+
+
     private void Awake()
     {
         parent = GameObject.Find("ShootEffect");
@@ -136,7 +175,7 @@ public abstract class Gun : MonoBehaviour
         shoot = false;
     }
 
-    private void ShootEffect(Vector3 hitPoint, RaycastHit hit)
+    public void ShootEffect(Vector3 hitPoint, RaycastHit hit)
     {
         GameObject shootEffect = Instantiate(shootEffectPrefab, hitPoint + new Vector3(0.05f, 0.05f, 0.05f), Quaternion.LookRotation(hit.normal));
         shootEffect.transform.parent = parent.transform;

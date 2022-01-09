@@ -4921,7 +4921,7 @@ Transform:
   m_GameObject: {fileID: 8341659922925838901}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 7683029278536946890}
   - {fileID: 7712418318415415269}
@@ -5097,5 +5097,6 @@ MonoBehaviour:
   parent: {fileID: 0}
   bullets: 20
   prefabHand: {fileID: 8733003864650411918, guid: 0c97ce62c196e9b4ab99ba897b4ad6e9, type: 3}
+  rightHandGO: {fileID: 0}
   shootingSound: {fileID: 8300000, guid: 077449fe801af9a40a8d72e734bb439c, type: 3}
   reloadSound: {fileID: 8300000, guid: 3c5c1d4d7b9307c458890a4beb12e4ae, type: 3}

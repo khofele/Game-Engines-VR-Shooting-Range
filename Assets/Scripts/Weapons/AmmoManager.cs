@@ -46,9 +46,25 @@ public class AmmoManager : MonoBehaviour
         if (ammoAmount > 0 && reloadAction.GetStateDown(rightHand))
         {
             audioSource.clip = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().ReloadSound;
-            audioSource.Play();
-            ammoAmount -= (bullets - currentBullets);
-            rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = bullets;
+
+            if(ammoAmount < bullets && currentBullets == 0)
+            {
+                rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = ammoAmount;
+                ammoAmount = 0;
+                audioSource.Play();
+            }
+            else if(ammoAmount < bullets) 
+            {
+                rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets += ammoAmount;
+                ammoAmount = 0;
+                audioSource.Play();
+            }
+            else
+            {
+                ammoAmount -= (bullets - currentBullets);
+                rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = bullets;
+                audioSource.Play();
+            }
         }
     }
 
