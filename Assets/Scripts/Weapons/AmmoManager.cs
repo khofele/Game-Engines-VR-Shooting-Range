@@ -9,10 +9,10 @@ public class AmmoManager : MonoBehaviour
     [SerializeField] private SteamVR_Action_Boolean reloadAction;
     [SerializeField] private SteamVR_Input_Sources rightHand;
     [SerializeField] private GameObject rightHandGO = null;
+    [SerializeField] private AudioSource audioSource = null;
     private static int ammoAmount = 0;
     private static int currentBullets = 0;
     private int bullets = 0;
-    private AudioSource audioSource = null;
 
     public static int AmmoAmount
     {
@@ -35,6 +35,7 @@ public class AmmoManager : MonoBehaviour
     private void Awake()
     {
         currentBullets = 0;
+        bullets = 0;
     }
 
     private void Update()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public abstract class Gun : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] private GameObject parent = null;
     [SerializeField] private int bullets = 2;
     [SerializeField] private GameObject prefabHand = null;
+    [SerializeField] private GameObject rightHandGO = null;
     private int currentBullets = 0;
     private bool shoot = false;
 
@@ -78,12 +80,13 @@ public abstract class Gun : MonoBehaviour
     private void Awake()
     {
         parent = GameObject.Find("ShootEffect");
+        rightHandGO = GameObject.Find("RightHand");
         audioSource = GetComponent<AudioSource>();
+        prefabHand.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = 0;
     }
 
     private void Update()
     {
-
         if (shootAction.GetStateDown(rightHand) && shoot == false && AmmoManager.CurrentBullets > 0)
         {
             shoot = true;
@@ -93,9 +96,8 @@ public abstract class Gun : MonoBehaviour
 
     public void ShootGun()
     {
-
         GetComponentInChildren<ParticleSystem>().Play();
-        AmmoManager.CurrentBullets -= 1;
+        rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets -= 1;
         //sound
         audioSource.clip = shootingSound;
         audioSource.Play();
@@ -128,9 +130,10 @@ public abstract class Gun : MonoBehaviour
                 }
             }
 
-            shoot = false;
+
 
         }
+        shoot = false;
     }
 
     private void ShootEffect(Vector3 hitPoint, RaycastHit hit)
