@@ -36,6 +36,7 @@ public class AmmoManager : MonoBehaviour
         currentBullets = 0;
     }
 
+
     private void Update()
     {
         //Debug.Log(currentBullets + " hier");
