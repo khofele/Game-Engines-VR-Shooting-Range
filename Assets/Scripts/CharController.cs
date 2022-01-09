@@ -98,7 +98,6 @@ public class CharController : MonoBehaviour
     {
         if (jumpAction.GetStateDown(leftHand) && isGrounded == true)
         {
-            Debug.Log("is jumping");
             rbody.AddForce(new Vector3(0, (Mathf.Sqrt(jumpHeight * -2f * gravity)), 0), ForceMode.VelocityChange);
             isGrounded = false;
             doubleJump = true;
@@ -108,7 +107,6 @@ public class CharController : MonoBehaviour
         }
         else if (jumpAction.GetStateDown(leftHand) && doubleJump == true)
         {
-            Debug.Log("double jump");
             rbody.AddForce(new Vector3(0, (Mathf.Sqrt(jumpHeight * -2f * gravity)), 0), ForceMode.VelocityChange);
             isGrounded = false;
             doubleJump = false;

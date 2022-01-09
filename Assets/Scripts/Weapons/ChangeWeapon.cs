@@ -10,13 +10,6 @@ public class ChangeWeapon : MonoBehaviour
     [SerializeField] private GameObject startWeapon = null;
     private GameObject newWeapon = null;
     private static GameObject currentWeapon = null;
-    private UIManagerGame uIManagerGame = new UIManagerGame();
-
-    private void Start()
-    {
-        //rightHand.GetComponent<Hand>().SetRenderModel(shortRangeWeapon);
-        //currentWeapon = rightHand.GetComponent<Hand>().renderModelPrefab;
-    }
 
     private void Awake()
     {
@@ -26,14 +19,10 @@ public class ChangeWeapon : MonoBehaviour
     }
 
     private void ChangeCurrentWeapon()
-    {
-        //if(newWeapon != currentWeapon)
-        //{
-            
-            rightHand.GetComponent<Hand>().renderModelPrefab = newWeapon;
-            rightHand.GetComponent<Hand>().SetRenderModel(newWeapon);
-            currentWeapon = newWeapon;
-        //}
+    {  
+        rightHand.GetComponent<Hand>().renderModelPrefab = newWeapon;
+        rightHand.GetComponent<Hand>().SetRenderModel(newWeapon);
+        currentWeapon = newWeapon;
     }
 
 
