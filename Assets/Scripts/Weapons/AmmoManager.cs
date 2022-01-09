@@ -38,6 +38,7 @@ public class AmmoManager : MonoBehaviour
         bullets = 0;
     }
 
+
     private void Update()
     {
         bullets = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().Bullets;
