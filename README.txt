@@ -22,18 +22,36 @@ Daraufhin kann das Spiel gestartet werden.
 =======
 BESONDERE LEISTUNGEN, HERAUSFORDERUNGEN, GESAMMELTE ERFAHRUNGEN:
 - Selbst geschriebener Character Controller:
-  Der Character Controller ermöglicht die komplette Interaktion des Spielers mit dem Menü sowie dem Spiel. Der Spieler kann einen Sprung sowie einen Doppelsprung ausführen und mit dem Grappling Hook die verschiedenen Plattformen erreichen. Zusätzlich kann sich der Spieler mit dem Trackpad und der Teleportfunktion bewegen. Außerdem ist die Interaktion mit den Waffen möglich. Es kann zudem Munition über Munitionsboxen eingesammelt und zwischen verschiedenen Schusswaffen gewechselt werden. Der Character Controller stellte zu Beginn eine größere Herausforderung dar, da das Erstellen des Character Controllers eine der ersten Aufgaben im Zusammenhang mit VR war und daher noch kein großes Wissen vorhanden war. Die Aufgabe des Character Controllers war somit gleichzeitig das Einarbeiten in SteamVR. Die grundlegende Funktionsweise von SteamVR war aber schnell klar und der Character Controller nahm Form an. Bei diesem konnten viele Erfahrungen und der grundlegende Umgang mit VR gesammelt werden und schuf zudem eine gute Basis für alle weiteren Aufgaben.
+  Der Character Controller ermöglicht die komplette Interaktion des Spielers mit dem Menü sowie dem Spiel. 
+  Der Spieler kann einen Sprung sowie einen Doppelsprung ausführen und mit dem Grappling Hook die verschiedenen Plattformen erreichen.
+  Zusätzlich kann sich der Spieler mit dem Trackpad und der Teleportfunktion bewegen. 
+  Außerdem ist die Interaktion mit den Waffen möglich. Es kann zudem Munition über Munitionsboxen eingesammelt und zwischen 
+  verschiedenen Schusswaffen gewechselt werden. Der Character Controller stellte zu Beginn eine größere Herausforderung dar, 
+  da das Erstellen des Character Controllers eine der ersten Aufgaben im Zusammenhang mit VR war und daher noch kein großes Wissen 
+  vorhanden war. Die Aufgabe des Character Controllers war somit gleichzeitig das Einarbeiten in SteamVR. Die grundlegende 
+  Funktionsweise von SteamVR war aber schnell klar und der Character Controller nahm Form an. Bei diesem konnten viele Erfahrungen 
+  und der grundlegende Umgang mit VR gesammelt werden und schuf zudem eine gute Basis für alle weiteren Aufgaben.
 
 - In-Game-UI:
-  Das In-Game-User-Interface stellte ebenfalls eine Herausforderung dar, da es jederzeit im Vordergrund sein muss. Zu Beginn war dies nicht der Fall und die UI clippte durch Objekte und Wände, wenn sich der Spieler auf diese zu bewegte. Hierfür eine Lösung zu finden war nicht ganz einfach und benötigte mehr Zeit als erwartet. Zudem waren viele Tests nötig bis die finale Umsetzung mit zwei Kameras zustande kam. Auch dies ist eine Erfahrung, die in weiteren VR-Projekten nützlich sein wird.
+  Das In-Game-User-Interface stellte ebenfalls eine Herausforderung dar, da es jederzeit im Vordergrund sein muss. 
+  Zu Beginn war dies nicht der Fall und die UI clippte durch Objekte und Wände, wenn sich der Spieler auf diese zu bewegte. 
+  Hierfür eine Lösung zu finden war nicht ganz einfach und benötigte mehr Zeit als erwartet. 
+  Zudem waren viele Tests nötig bis die finale Umsetzung mit zwei Kameras zustande kam. 
+  Auch dies ist eine Erfahrung, die in weiteren VR-Projekten nützlich sein wird.
 
 - Menü:
   Das Menü sowie die In-Game-UI sind an die VR-Sicht angepasst. Das Menü kann mit einem Laserpointer bedient werden. 
+  VR erwies sich hier als doch recht unterschiedlich zu normalen Projekten und stellte daher eine Herausforderung für uns dar, die
+  wir schlussendlich gut gemeistert haben. 
 
 - Katana:
-  Das Katana kann durch die VR-Gegebenheiten wie eine echte Klinge geschwungen werden.
+  Das Katana kann durch die VR-Gegebenheiten wie eine echte Klinge geschwungen werden. Die Umsetzung hat viel Spaß gemacht, 
+  da es genau das ist, was das Besondere an VR ist. Es war dennoch eine kleine Umstellung, da man normalerweise einfach eine Taste
+  belegt, was hier nicht der Fall war.
 
-Insgesamt war das Projekt eine spannende und gute Erfahrung und hat viel Spaß gemacht. Es konnten viele neue Fähigkeiten erlernt werden, die sich auch in weiteren Projekten als nützlich erweisen werden. 
+Insgesamt war das Projekt eine spannende und gute Erfahrung und hat viel Spaß gemacht. 
+Es konnten viele neue Fähigkeiten erlernt werden, die sich auch in weiteren Projekten als nützlich erweisen werden. 
+
 
 =======
 VERWENDETE ASSETS:
