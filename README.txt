@@ -8,10 +8,12 @@ Tabea Leibl[204105]
 
 =======
 DEMOVIDEO:
+https://youtu.be/YXeP-y-Ut0c
 
 =======
 LINK ZUM PROJEKT:
-https://github.com/khofele/VR-Projekt-Game-Engines
+Zip: https://studhsheilbronnde-my.sharepoint.com/:u:/g/personal/khofele_stud_hs-heilbronn_de/EeHcu8k1IcpLo2On-NYvGjIBGu4svg-Ur1JmrXcyZp5wTQ?e=zIpaYa
+Github: https://github.com/khofele/VR-Projekt-Game-Engines
 
 =======
 BESONDERHEITEN DES PROJEKTS:
