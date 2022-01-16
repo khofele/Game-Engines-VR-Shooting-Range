@@ -4,7 +4,7 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public abstract class Gun : MonoBehaviour
+public abstract class Gun : Weapon
 {
     [SerializeField] private float damage = 10f;
     [SerializeField] private float range = 80f;

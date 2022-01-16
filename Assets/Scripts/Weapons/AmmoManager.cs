@@ -40,32 +40,36 @@ public class AmmoManager : MonoBehaviour
 
     private void Update()
     {
-        bullets = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().Bullets;
-        currentBullets = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets;
-
-        if (ammoAmount > 0 && reloadAction.GetStateDown(rightHand))
+        if(ChangeWeapon.CurrentWeapon.name != "RightRenderModel Slim Variant Katana")
         {
-            audioSource.clip = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().ReloadSound;
+            bullets = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().Bullets;
+            currentBullets = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets;
 
-            if (ammoAmount < bullets && currentBullets == 0)
+            if (ammoAmount > 0 && reloadAction.GetStateDown(rightHand))
             {
-                rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = ammoAmount;
-                ammoAmount = 0;
-                audioSource.Play();
-            }
-            else if (ammoAmount < bullets)
-            {
-                rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets += ammoAmount;
-                ammoAmount = 0;
-                audioSource.Play();
-            }
-            else
-            {
-                ammoAmount -= (bullets - currentBullets);
-                rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = bullets;
-                audioSource.Play();
+                audioSource.clip = rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().ReloadSound;
+
+                if (ammoAmount < bullets && currentBullets == 0)
+                {
+                    rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = ammoAmount;
+                    ammoAmount = 0;
+                    audioSource.Play();
+                }
+                else if (ammoAmount < bullets)
+                {
+                    rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets += ammoAmount;
+                    ammoAmount = 0;
+                    audioSource.Play();
+                }
+                else
+                {
+                    ammoAmount -= (bullets - currentBullets);
+                    rightHandGO.GetComponent<Hand>().renderModelPrefab.gameObject.GetComponent<RenderModel>().controllerPrefab.gameObject.GetComponent<Gun>().CurrentBullets = bullets;
+                    audioSource.Play();
+                }
             }
         }
+
     }
 
     private void OnTriggerEnter(Collider other)

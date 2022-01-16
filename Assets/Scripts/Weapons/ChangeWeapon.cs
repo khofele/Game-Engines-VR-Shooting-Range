@@ -11,6 +11,11 @@ public class ChangeWeapon : MonoBehaviour
     private GameObject newWeapon = null;
     private static GameObject currentWeapon = null;
 
+    public static GameObject CurrentWeapon
+    {
+        get => currentWeapon;
+    }
+
     private void Awake()
     {
         rightHand.GetComponent<Hand>().renderModelPrefab = startWeapon;
@@ -31,7 +36,7 @@ public class ChangeWeapon : MonoBehaviour
     {
         if(other.gameObject.tag == "Weapon")
         {
-            newWeapon = other.gameObject.GetComponent<Weapon>().PrefabHand;
+            newWeapon = other.gameObject.GetComponent<CollectableWeapon>().PrefabHand;
             ChangeCurrentWeapon();
         }
     }
