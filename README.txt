@@ -1,7 +1,10 @@
-PROJEKTNAME:
 VR in Unity - Schießstand
+Version: 2022
 
-=======
+Schießstand in VR, auf dem mit verschiedenen Waffen auf unterschiedliche, sich teilweise bewegende Ziele geschossen werden kann.
+
+---------------------------------------------------------------------------------------------------------------
+
 TEAMMITGLIEDER:
 Karen Hofele[204029]
 Tabea Leibl[204105]
